@@ -4,18 +4,131 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Fira+Code:wght@400;500&display=swap');
+
 :root {
-  --ifm-color-primary: #ff2670;
-  --ifm-color-primary-dark: #ff2670;
-  --ifm-color-primary-darker: #ff2670;
-  --ifm-color-primary-darkest: #ff2670;
-  --ifm-color-primary-light: #ff2670;
-  --ifm-color-primary-lighter: #ff2670;
-  --ifm-color-primary-lightest: #ff2670;
+  /* Typography */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  /* Brand palette – Rust orange */
+  --ifm-color-primary: #f97316; /* orange-500 */
+  --ifm-color-primary-dark: #ea580c; /* orange-600 */
+  --ifm-color-primary-darker: #c2410c; /* orange-700 */
+  --ifm-color-primary-darkest: #9a3412; /* orange-800 */
+  --ifm-color-primary-light: #fb923c; /* orange-400 */
+  --ifm-color-primary-lighter: #fdba74; /* orange-300 */
+  --ifm-color-primary-lightest: #ffedd5; /* orange-100 */
+
+  /* Base colours */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #fafafb;
+  --ifm-heading-color: #18181b;
+  --ifm-text-color: #33334d;
+
+  /* Misc */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(249, 115, 22, 0.08);
+  --ifm-card-border-radius: 0.875rem;
+  --ifm-alert-border-left-width: 4px;
 }
+
+/* Dark theme overrides */
+[data-theme='dark'] {
+  --ifm-background-color: #0f0f11;
+  --ifm-background-surface-color: #1a1a1d;
+  --ifm-heading-color: #ffffff;
+  --ifm-text-color: #e4e4e7;
+  --docusaurus-highlighted-code-line-bg: rgba(249, 115, 22, 0.14);
+}
+
+/* ───────────────── HERO ───────────────── */
+.heroBanner {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #f97316 0%, #0ea5e9 100%);
+  color: #fff;
+  text-align: center;
+}
+
+.heroBanner h1,
+.heroBanner .hero__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.heroBanner .hero__subtitle {
+  font-size: 1.35rem;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ───────────────── BUTTONS ───────────────── */
+.button--primary {
+  --ifm-button-background-color: var(--ifm-color-primary);
+  --ifm-button-border-color: var(--ifm-color-primary);
+  --ifm-button-color: #fff;
+  --ifm-button-hover-color: #fff;
+  --ifm-button-hover-background-color: var(--ifm-color-primary-dark);
+  --ifm-button-hover-border-color: var(--ifm-color-primary-dark);
+  --ifm-button-active-background-color: var(--ifm-color-primary-darkest);
+  --ifm-button-active-border-color: var(--ifm-color-primary-darkest);
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: transform 0.15s ease-in-out;
+}
+
+.button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(249, 115, 22, 0.25);
+}
+
+.button--primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ───────────────── CARDS ───────────────── */
+.card {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+[data-theme='dark'] .card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--ifm-background-surface-color);
+}
+
+/* ───────────────── CODE BLOCKS ───────────────── */
+code {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.3rem;
+}
+
+pre code {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+}
+
+.highlight {
+  border-radius: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+/* ───────────────── SIDEBAR ───────────────── */
+.theme-doc-sidebar-item-category > .menu__list-item-collapsible > .menu__link:after {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23f97316' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z'/></svg>");
+}
+
 
 table {
   display: table;
@@ -24,11 +137,6 @@ table {
   text-align: center;
 }
 
-.fundingButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .innerButtonText {
   font-size: 16px;

@@ -65,6 +65,7 @@ const config = {
         logo: {
           alt: 'OG Rust bounties',
           src: 'img/logo.png',
+          srcDark: 'img/logo_dark.png',
         },
         items: [],
       },
