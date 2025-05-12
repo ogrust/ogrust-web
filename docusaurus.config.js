@@ -62,9 +62,8 @@ const config = {
       // Replace with your project's social card
       image: 'img/social-card.png',
       navbar: {
-        title: 'OG Rust Bounties',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'OG Rust bounties',
           src: 'img/logo.png',
         },
         items: [],
