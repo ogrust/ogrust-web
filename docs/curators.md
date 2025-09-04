@@ -6,6 +6,6 @@ title: Curators
 |---------------------|------------------------------|
 | Valery Gantchev     | valery@intergalactic.limited |
 | Jakub Panik         | kubo@intergalactic.limited   |
-| Bastian Kocher      | bastian@parity.io            |
-| Donal               | donal.murray@parity.io       |
+| Bastian Köcher      | bastian@parity.io            |
+| Dónal Murray        | donal.murray@parity.io       |
 | 0xTaylor            | 0xtaylor@chaosdao.org        |

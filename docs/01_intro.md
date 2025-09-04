@@ -17,7 +17,7 @@ Here are the most important criteria that guide our decisions:
 As we operate with limited funds provided by the Polkadot treasury, all decisions are guided by our subjective understanding of what is best for Polkadot. We may reject a technically sound application if we don't see its added value in the bigger context of things.
 
 <div class="fundingButton">
-  <a href="#" target="_blank" class="button button--primary">
+  <a href="https://forms.gle/38Ap1i6LYF8Ki6zy7" target="_blank" class="button button--primary">
     <p class="innerButtonText"> Apply for Funding </p>
   </a>
 </div>
